@@ -27,6 +27,8 @@ ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  list-style-type: none;
+
 }
 
 img {
@@ -38,20 +40,17 @@ body {
   background-color: var(--primary-bg-color);
   font-family: "Roboto", sans-serif;
   font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
 }
 
-.link {
+a {
   text-decoration: none;
-}
-
-.list {
-  list-style: none;
 }
 
 /* Header 2 */
 .header-two {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -62,18 +61,14 @@ body {
 
 /* Header 3 */
 .header-three {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  text-align: center;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
 
 .text {
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -88,7 +83,11 @@ body {
   margin: 0 auto;
 }
 
-/* ----Header----*/
+/**
+  |============================
+  | Header
+  |============================
+*/
 .page-header {
   border-bottom: 1px solid #e7e9fc;
 }
@@ -125,24 +124,22 @@ body {
 
 .color {
   color: var(--primary-text-color);
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
 
 /* Menu */
-.pages-list {
+.nav-list {
   display: flex;
   gap: 40px;
 }
 
-.pages-list:last-child {
+.nav-list:last-child {
   margin-right: 0px;
 }
 
-.pages-list .link {
+.nav-link {
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -155,19 +152,19 @@ body {
 }
 
 /* Navigation: contacts */
-.contacts {
+.address-list {
   display: flex;
 }
 
-.contacts .item {
+.address-item {
   margin-right: 40px;
 }
 
-.contacts .item:last-child {
+.address-item:last-child {
   margin-right: 0px;
 }
 
-.contacts .link {
+.address-link {
   display: flex;
 
   padding-top: 24px;
@@ -185,23 +182,25 @@ body {
   color: var(--focus-hover);
 }
 
-/* ----MAIN---- */
-/* Hero - Section 1*/
-.hero-section {
+/**
+  |============================
+  | Hero - Section 1
+  |============================
+*/
+.hero {
   padding: 188px 0;
   background-color: var(--accent-bg-color);
 }
 
 .hero-title {
+  display: block;
+  width: 496px;
   margin: 0 auto;
   text-align: center;
-  max-width: 496px;
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  letter-spacing: 0.02em;
+  letter-spacing: 1.12px;
   color: var(--accent-text-color);
 }
 
@@ -215,6 +214,7 @@ body {
   border: none;
   margin-top: 48px;
   align-items: center;
+  justify-content: center;
 
   font-family: "Roboto", sans-serif;
   color: var(--accent-text-color);
@@ -255,15 +255,13 @@ body {
   margin-right: 0px;
 }
 
-.item-features {
+.features-item {
   width: calc((100% - 72px) / 4);
 }
 
-.subtitle {
+.feature-subtitle {
   margin-bottom: 8px;
 
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -271,12 +269,7 @@ body {
   color: var(--primary-text-color);
 }
 
-.text {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
+.feature-text {
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
 }
@@ -285,8 +278,11 @@ body {
   background-color: var(--primary-bg-color);
 }
 
-/* What we are doing - Section 3*/
-
+/**
+  |============================
+  | What we are doing - Section 3
+  |============================
+*/
 .samples {
   padding: 0 0 120px 0;
   min-height: 412px;
@@ -311,7 +307,11 @@ body {
   width: calc((100% - 2 * 24px) / 3);
 }
 
-/* Our Team - Section 4 */
+/**
+  |============================
+  | Our Team - Section 4
+  |============================
+*/
 .team {
   background-color: var(--secondary-acnt-bg-color);
   padding: 120px 0;
@@ -336,7 +336,7 @@ body {
   margin-right: 0;
 }
 
-.subtitle {
+.team-subtitle {
   margin-bottom: 8px;
 }
 
@@ -346,6 +346,68 @@ body {
 
 .team-text {
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.team-soc-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--btn-main-color);
+  border-radius: 50%;
+}
+
+/**
+  |============================
+  | Customers - Section 5
+  |============================
+*/
+
+.section-title {
+  margin-top: 120px;
+  margin-bottom: 72px;
+}
+
+.clients-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 124px;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 168px;
+  height: 88px;
+  border-radius: 4px;
+  border: 1px solid #8E8F99;
+
+}
+
+.clients-icon {
+  fill: #8E8F99;
+}
+
+.clients-link:hover .clients-icon {
+  fill: #404BBF;
+}
+
+.clients-link:hover {
+  border-color: #404BBF;
 }
 
 /* ---BUTTONS--- */
