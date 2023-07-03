@@ -9,6 +9,7 @@
   --accent-bg-color: #2e2f42;
   --secondary-acnt-bg-color: #f4f4fd;
   --focus-hover: #404bbf;
+  --main-gradient: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70));
 }
 
 h1,
@@ -188,13 +189,19 @@ a {
   |============================
 */
 .hero {
+  display: flex;
+  justify-content: center;
   padding: 188px 0;
+  margin: 0 auto;
+  width: 1440px;
   background-color: var(--accent-bg-color);
+  background-image: var(--main-gradient), url(../images/hero/bg-people-office.jpg);
 }
 
 .hero-title {
   display: block;
   width: 496px;
+
   margin: 0 auto;
   text-align: center;
   font-weight: 700;
@@ -228,7 +235,12 @@ a {
   border-radius: 4px;
 }
 
-/* Feature - Section 2*/
+/**
+  |============================
+  | Features - Section 2
+  |============================
+*/
+
 .features {
   padding: 120px 0;
 }
@@ -259,9 +271,22 @@ a {
   width: calc((100% - 72px) / 4);
 }
 
-.feature-subtitle {
-  margin-bottom: 8px;
+.features-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 264px;
+  height: 112px;
+  border-radius: 4px;
+  background-color: var(--secondary-acnt-bg-color);
+}
 
+.features-icon {
+  margin: 24px 100px;
+}
+
+.feature-subtitle {
+  margin: 8px 0;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -330,6 +355,8 @@ a {
   width: calc((100% - 24px * 3) / 4);
   background-color: var(--primary-bg-color);
   border-radius: 0px 0px 4px 4px;
+
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .team-item:last-child {
@@ -345,7 +372,6 @@ a {
 }
 
 .team-text {
-  text-align: center;
   margin-bottom: 8px;
 }
 
@@ -365,6 +391,10 @@ a {
 
   background-color: var(--btn-main-color);
   border-radius: 50%;
+}
+
+.team-soc-link:hover {
+  background-color: #31D0AA;
 }
 
 /**
@@ -437,16 +467,25 @@ a {
   background-color: var(--focus-hover);
 }
 
-/*----Footer----*/
-.page-footer {
-  padding: 100px 0;
+/**
+  |============================
+  | Footer
+  |============================
+*/
+
+/* Logo block */
+.footer-box {
+  display: flex;
+  gap: 120px;
 }
 
-.bottom {
-  flex-direction: column;
-  width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
+.footer-logo-box {
+  display: block;
+  width: 264px;
+}
+
+.page-footer {
+  padding: 100px 0;
 }
 
 .page-footer .link {
@@ -463,14 +502,51 @@ a {
   background-color: var(--accent-bg-color);
 }
 
-.bottom-text {
-  display: inline-block;
-  max-width: 264px;
-  color: var(--footer-text);
+
+.footer-text-logo {
+  color: var(--secondary-acnt-bg-color)
 }
 
-/* ------SECOND PAGES----- */
-/* ------Fileter Section----- */
+/* Social media block */
+
+.footer-soc-list {
+  display: flex;
+  gap: 24px;
+  justify-content: start;
+  align-items: center;
+}
+
+.footer-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--btn-main-color);
+}
+
+.footer-text-soc {
+  margin-bottom: 16px;
+
+  color: var(--accent-text-color);
+  font-weight: 500;
+}
+
+
+/**
+  |============================
+  | SECOND PAGE - Portfolio
+  |============================
+*/
+
+/**
+  |============================
+  | 
+  |============================
+*/
+
+
 .filters {
   padding-top: 96px;
   padding-bottom: 120px;
