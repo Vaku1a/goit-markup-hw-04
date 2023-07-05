@@ -632,10 +632,7 @@ button {
 }
 
 .filters-item {
-  position: relative;
-
   width: calc((100% - 24px * 2) / 3);
-  overflow: hidden;
 }
 
 .filters-title-box {
@@ -651,6 +648,11 @@ button {
 }
 
 /* Overlay clases */
+
+.filters-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
 
 .overlay {
   position: absolute;
