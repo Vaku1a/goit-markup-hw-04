@@ -153,6 +153,10 @@ button {
   position: absolute;
   bottom: 0;
   left: 0;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -199,6 +203,31 @@ button {
   color: var(--secondary-text-color);
 }
 
+
+/* .hero-btn:active {
+  display: block;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  margin-top: 48px;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Roboto", sans-serif;
+  color: var(--accent-text-color);
+  background-color: var(--btn-main-color);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border-radius: 4px;
+} */
+
 /**
   |============================
   | Hero - Section 1
@@ -227,7 +256,7 @@ button {
   color: var(--accent-text-color);
 }
 
-.button {
+.hero-btn {
   display: block;
   padding: 0;
   margin-left: auto;
@@ -249,6 +278,16 @@ button {
   letter-spacing: 0.04em;
   cursor: pointer;
   border-radius: 4px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  color: var(--accent-text-color);
+  background-color: #404bbf;
 }
 
 /**
@@ -407,6 +446,10 @@ button {
 
   background-color: var(--btn-main-color);
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-link:hover {
@@ -446,6 +489,9 @@ button {
 
 .clients-icon {
   fill: #8E8F99;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .clients-icon {
@@ -457,31 +503,6 @@ button {
 }
 
 /* ---BUTTONS--- */
-.button:hover,
-.button:focus {
-  color: var(--accent-text-color);
-  background-color: #404bbf;
-}
-
-.button:active {
-  color: var(--accent-text-color);
-  background-color: #404bbf;
-}
-
-.button.primary {
-  /* display: block; */
-  color: var(--accent-text-color);
-  background-color: #4d5ae5;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.04em;
-}
-
-.button.primary:hover,
-.button.primary:focus {
-  background-color: var(--focus-hover);
-}
 
 /**
   |============================
@@ -558,7 +579,7 @@ button {
 
 /**
   |============================
-  | 
+  | Filters - Section 1
   |============================
 */
 
@@ -568,7 +589,9 @@ button {
   padding-bottom: 120px;
 }
 
-.btn-list {
+/* Buttons */
+
+.filters-btn-list {
   display: flex;
   justify-content: center;
   gap: 24px;
@@ -580,13 +603,17 @@ button {
   background: #F4F4FD;
   border-radius: 4px;
   border: 1px solid #e7e9fc;
-  /* Button Text */
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: #4D5AE5;
+
+  transition-property: color background-color boarder-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-filter:hover,
@@ -597,28 +624,65 @@ button {
   border: 1px solid transparent;
 }
 
-.filter-list {
+.filters-list {
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
 }
 
-.filter-item {
+.filters-item {
+  position: relative;
+
   width: calc((100% - 24px * 2) / 3);
+  overflow: hidden;
 }
 
-.filter-box {
+.filters-title-box {
   display: block;
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
 }
 
-.filter-titel {
+.filters-title {
   text-align: left;
-  margin-bottom: 8px
+  margin-bottom: 8px;
 }
+
+/* Overlay clases */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 360px;
+  height: 300px;
+
+  transform: translateY(100%);
+
+  padding: 40px 32px;
+  background-color: var(--btn-main-color);
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-text {
+  color: var(--secondary-acnt-bg-color)
+}
+
+.filters-item:hover {
+  border: 1px solid var(--cloud, #F4F4FD);
+  background: var(--white, #FFF);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.filters-item:hover .overlay {
+  transform: translateY(0);
+}
+
 
 /**
   |============================
@@ -638,7 +702,9 @@ button {
 }
 
 .backdrop.is-hidden {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .modal {
