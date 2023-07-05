@@ -502,7 +502,6 @@ button {
   border: 1px solid #8E8F99;
 
   color: #8e8f99;
-
 }
 
 .clients-icon {
@@ -558,7 +557,7 @@ button {
 
 
 .footer-text-logo {
-  color: var(--secondary-acnt-bg-color)
+  color: var(--secondary-acnt-bg-color);
 }
 
 /* Social media block */
@@ -571,6 +570,7 @@ button {
 }
 
 .footer-soc-item {
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -710,6 +710,10 @@ button {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.filters-link {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .filters-link:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
