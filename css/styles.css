@@ -148,6 +148,7 @@ button {
   padding-top: 24px;
   padding-bottom: 24px;
   position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.active::after {
@@ -163,8 +164,6 @@ button {
   position: absolute;
   bottom: -1px;
   left: 0;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -177,6 +176,10 @@ button {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.active {
+  color: var(--focus-hover);
 }
 
 /* Address - contacts navigation*/
@@ -462,6 +465,10 @@ button {
   background-color: #404bbf;
 }
 
+.team-soc-icon {
+  fill: var(--btn-second-color);
+}
+
 /**
   |============================
   | Customers - Section 5
@@ -510,7 +517,7 @@ button {
 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
-  fill: #404BBF;
+  color: #404bbf;
 }
 
 .clients-link:hover,
@@ -545,6 +552,7 @@ button {
   display: inline-block;
   margin: 0 0 16px 0;
   width: 100%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-footer .logo-highlight {
