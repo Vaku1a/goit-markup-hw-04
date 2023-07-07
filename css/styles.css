@@ -508,20 +508,18 @@ button {
   border: 1px solid #8E8F99;
 
   color: #8e8f99;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
   fill: currentColor;
 }
 
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
-  color: #404bbf;
-}
-
 .clients-link:hover,
 .clients-link:focus {
   border-color: #404BBF;
+  color: #404bbf;
 }
 
 /**
@@ -589,7 +587,7 @@ button {
   width: 40px;
   height: 40px;
   background-color: var(--btn-main-color);
-  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-text-soc {
