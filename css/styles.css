@@ -466,7 +466,7 @@ button {
 }
 
 .team-soc-icon {
-  color: var(--btn-second-color);
+  fill: var(--btn-second-color);
 }
 
 /**
