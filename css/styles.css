@@ -741,7 +741,7 @@ button {
   transform: translateY(0%);
 }
 
-.filters-item:hover .overlay {
+.filters-link:hover .overlay {
   transform: translateY(0);
 }
 
